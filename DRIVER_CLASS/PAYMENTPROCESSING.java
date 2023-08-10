@@ -6,7 +6,7 @@ import Learning_Spring.Payment_Types.*;
 
 public class PAYMENTPROCESSING {
     boolean paymentgateway(String way,Double amount){
-        if("CREDIDCARD".equals(way)){
+        if("CREDITCARD".equals(way)){
             CREDID_CARD cc=new CREDID_CARD();
             
             return cc.amount(amount);
