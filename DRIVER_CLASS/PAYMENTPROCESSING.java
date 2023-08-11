@@ -1,21 +1,18 @@
 package Learning_Spring.DRIVER_CLASS;
 import Learning_Spring.Payment_Types.*;
 
-
-
-
 public class PAYMENTPROCESSING {
+    ipay a=null;
+     PAYMENTPROCESSING(ipay a){
+            this.a=a;
+        }
+        
     boolean paymentgateway(String way,Double amount){
-        if("CREDITCARD".equals(way)){
-            CREDID_CARD cc=new CREDID_CARD();
-            
-            return cc.amount(amount);
-        }
-        if("UPI".equals(way)){
-          UPI up= new UPI();
-          return up.amount(amount);
-        }
-        return false;
+        ipay i=a;
+        i.amount(amount);
+        return true;
     }
+
+    
     
 }
